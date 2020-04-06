@@ -6,11 +6,11 @@
                 <div class="data infected">
                     <div class="float-right">
                         <div class="graph-icon icon-infected">
-                            00.00% <span class="material-icons">trending_up</span>
+                            {{ div model.data.todayCases model.case.firstObject.cases }}% <span class="material-icons">trending_up</span>
                         </div>
                     </div>
                     <div class="total">{{ formatLargeNumber @model.case.firstObject.cases }}</div>
-                    <div class="today"># today</div>
+                    <div class="today">{{ formatLargeNumber @model.data.todayCases }} today</div>
                 </div>
             </div>
         </div>
@@ -20,11 +20,11 @@
                 <div class="data death">
                     <div class="float-right">
                         <div class="graph-icon icon-deaths">
-                            00.00% <span class="material-icons">trending_up</span>
+                            {{ div model.data.totalDeaths model.data.finishedCases }} <span class="material-icons">trending_up</span>
                         </div>
                     </div>
                     <div class="total">{{formatLargeNumber @model.case.firstObject.deaths }}</div>
-                    <div class="today"># today</div>
+                    <div class="today">{{ formatLargeNumber @model.data.todayDeaths }} today</div>
                 </div>
 
             </div>
@@ -35,11 +35,25 @@
                 <div class="data recovered">
                     <div class="float-right">
                         <div class="graph-icon icon-recovered">
-                            00.00%<span class="material-icons">trending_up</span>
+                            {{ div model.data.totalRecovered model.data.finishedCases }}%<span class="material-icons">trending_up</span>
                         </div>
                     </div>
-                    <div class="total">{{formatLargeNumber @model.case.firstObject.recovered }}</div>
-                    <div class="today"># today</div>
+                    <div class="total">{{ formatLargeNumber @model.case.firstObject.recovered }}</div>
+                    <div class="today">{{ formatLargeNumber @model.data.activeCases }} remaining</div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card-box">
+                <div class="header-title">Critical</div>
+                <div class="data critical">
+                    <div class="float-right">
+                        <div class="graph-icon icon-critical">
+                            {{div model.data.totalCritical model.data.activeCases}}%<span class="material-icons">trending_up</span>
+                        </div>
+                    </div>
+                    <div class="total">{{ formatLargeNumber @model.data.totalCritical }}</div>
+                    <div class="today">{{ formatLargeNumber @model.data.casesPer1M }} per million</div>
                 </div>
             </div>
         </div>

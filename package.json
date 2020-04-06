@@ -45,6 +45,7 @@
     "ember-fetch": "^7.0.1",
     "ember-load-initializers": "^2.1.1",
     "ember-material-design-icons-shim": "^0.1.13",
+    "ember-math-helpers": "^2.14.0",
     "ember-maybe-import-regenerator": "^0.1.6",
     "ember-perfectscroll": "^0.1.18",
     "ember-qunit": "^4.6.0",

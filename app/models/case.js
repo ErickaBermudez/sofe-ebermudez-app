@@ -7,4 +7,6 @@ export default class CaseModel extends Model {
     @attr('number') cases;
     @attr('number') deaths;
     @attr('number') recovered;
+    @attr('number') totalCritical;
+    @attr('number') todayCases;
 }
