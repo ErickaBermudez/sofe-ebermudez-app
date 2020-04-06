@@ -1,8 +1,73 @@
-
 @import "ember-bootstrap/bootstrap";
+$background-color: #282E38;
+$secondary-background-color: #323A46;
+$light-dark-color: #3B4452;
+$main-text: #fff;
+$secondary-text: #A9B3BD;
+$color-cases: #21AFDD;
+$card-border-radius: 20px; 
+$card-padding: 20px;
 
+body {
+  background-color: $background-color;
+  color: $main-text;
+  padding-left: 4em;
+  padding-right: 4em;
+}
 
 #virus-image {
-    height: 20px; 
-    width: 20px;
-  }
+  height: 30px;
+  width: 30px;
+}
+
+.infectedCountries {
+  max-height: 300px;
+  overflow-y: scroll;
+}
+
+.navbar-custom {
+  background-color: $background-color !important;
+}
+
+.text-blue{
+  color: $color-cases;
+}
+
+.card-box{
+  background-color: $secondary-background-color;
+  border-radius: $card-border-radius;
+  padding: $card-padding;
+}
+
+.casesSmall{
+  font-size: 12px;
+  float: right;
+  margin-top: -60px;
+}
+
+.infectedCountry{
+  border-bottom: 2px solid $light-dark-color;
+  padding: 5px;
+  padding-top: 10px;
+  margin-top: 5px;
+}
+
+.infectedCountryName{
+  font-size: 1em;
+}
+
+.infectedCountryDetails{
+  font-size: .8em;
+  margin-top: -10px;
+}
+
+.header-title{
+  font-size: 1.2em;
+}
+
+#today-stats{
+  font-size: .8em;
+  margin-top: 5px;
+  color: $secondary-text;
+  font-weight: bold;
+}

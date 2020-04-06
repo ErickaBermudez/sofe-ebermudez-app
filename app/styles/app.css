@@ -1,0 +1,10 @@
+#virus-image {
+  height: 20px;
+  width: 20px;
+}
+
+.infectedCountries {
+  max-height: 350px;
+  overflow-y: scroll;
+}
+/*# sourceMappingURL=app.css.map */
