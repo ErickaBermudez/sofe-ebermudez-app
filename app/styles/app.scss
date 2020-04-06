@@ -135,3 +135,23 @@ body {
   .today{
     font-size: .7em;
   }
+
+  #search{
+    background-color: $background-color;
+    color: $main-text;
+    border-color: $light-dark-color;
+    width: 100%;
+    font-size: 12px;
+  }
+
+  .custom-select{
+    background-color: $background-color;
+    color: $main-text;
+    border-color: $light-dark-color;
+    width: 100%;
+    font-size: 12px;
+  }
+
+  #country-control{
+    margin-bottom: -20px;
+  }

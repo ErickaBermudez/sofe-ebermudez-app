@@ -6,7 +6,8 @@
                 <div class="data infected">
                     <div class="float-right">
                         <div class="graph-icon icon-infected">
-                            {{ div model.data.todayCases model.case.firstObject.cases }}% <span class="material-icons">trending_up</span>
+                            {{ div model.data.todayCases model.case.firstObject.cases }}% <span
+                                class="material-icons">trending_up</span>
                         </div>
                     </div>
                     <div class="total">{{ formatLargeNumber @model.case.firstObject.cases }}</div>
@@ -20,7 +21,8 @@
                 <div class="data death">
                     <div class="float-right">
                         <div class="graph-icon icon-deaths">
-                            {{ div model.data.totalDeaths model.data.finishedCases }} <span class="material-icons">trending_up</span>
+                            {{ div model.data.totalDeaths model.data.finishedCases }} <span
+                                class="material-icons">trending_up</span>
                         </div>
                     </div>
                     <div class="total">{{formatLargeNumber @model.case.firstObject.deaths }}</div>
@@ -35,7 +37,8 @@
                 <div class="data recovered">
                     <div class="float-right">
                         <div class="graph-icon icon-recovered">
-                            {{ div model.data.totalRecovered model.data.finishedCases }}%<span class="material-icons">trending_up</span>
+                            {{ div model.data.totalRecovered model.data.finishedCases }}%<span
+                                class="material-icons">trending_up</span>
                         </div>
                     </div>
                     <div class="total">{{ formatLargeNumber @model.case.firstObject.recovered }}</div>
@@ -49,7 +52,8 @@
                 <div class="data critical">
                     <div class="float-right">
                         <div class="graph-icon icon-critical">
-                            {{div model.data.totalCritical model.data.activeCases}}%<span class="material-icons">trending_up</span>
+                            {{div model.data.totalCritical model.data.activeCases}}%<span
+                                class="material-icons">trending_up</span>
                         </div>
                     </div>
                     <div class="total">{{ formatLargeNumber @model.data.totalCritical }}</div>
@@ -67,23 +71,17 @@
                     <p id="today-stats">Today's Statistics</p>
                 </div>
                 <h4 class="header-title">{{model.country.length}} Affected Countries </h4>
-                <!--<div class="form-group row">
-                    <div class="col-md-8 col-8">
-                        <input type="text" id="example-placeholder" class="form-control"
-                            placeholder="Search Affected Countries">
-                    </div>
-                    <div class="col-md-4 col-4">
-                        <select class="custom-select">
-                            <option selected="" disabled>Sort By</option>
-                            <option value="cases">Total Cases</option>
-                            <option value="todayCases">Today Cases</option>
-                            <option value="deaths">Total Deaths</option>
-                            <option value="todayDeaths">Today Deaths</option>
-                            <option value="recovered">Total Recoveries</option>
-                        </select>
-                    </div>
+                <div class="form-group" id="country-control">
+                    <input type="text" id="search" class="form-control" placeholder="Search Affected Countries">
+                    <select class="custom-select">
+                        <option selected="" disabled>Sort By</option>
+                        <option value="cases">Total Cases</option>
+                        <option value="todayCases">Today Cases</option>
+                        <option value="deaths">Total Deaths</option>
+                        <option value="todayDeaths">Today Deaths</option>
+                        <option value="recovered">Total Recoveries</option>
+                    </select>
                 </div>
-                -->
                 <div class="fa-3x text-center">
                     <i class="fas fa-circle-notch fa-spin m-2"></i>
                 </div>
@@ -96,8 +94,9 @@
                                 {{ country.cases }} Cases</span> & <span class="text-danger"> {{ country.deaths }}
                                 Deaths</span></p>
                         <div class="casesSmall">
-                            <span class="infectedCountryCases text-blue">{{ country.todayCases }} + Cases</span>
-                            <span class="infectedCountryDeaths text-danger">{{ country.todayDeaths }} +Deaths</span>
+                            <span class="infectedCountryCases text-blue">+{{ country.todayCases }} cases</span>
+                            <br>
+                            <span class="infectedCountryDeaths text-danger">+{{ country.todayDeaths }} deaths</span>
                         </div>
                     </div>
                     {{/each}}
