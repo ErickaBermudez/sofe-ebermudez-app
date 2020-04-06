@@ -77,6 +77,16 @@
                 <div class="fa-3x text-center">
                     <i class="fas fa-circle-notch fa-spin m-2"></i>
                 </div>
+                <select class="custom-select">
+                     <!--onchange={{action "setSelection" value="target.value"}}-->
+                    <option disabled selected> Sort By Coming soon! </option>
+                    <option disabled value="cases">Total Cases</option>
+                    <option disabled value="todayCases">Today Cases</option>
+                    <option disabled value="deaths">Total Deaths</option>
+                    <option disabled value="todayDeaths">Today Deaths</option>
+                    <option disabled value="recovered">Recoveries</option>
+                </select>
+                
                 <div class="infectedCountries">
 
                     {{country-list countries = model.country}}
