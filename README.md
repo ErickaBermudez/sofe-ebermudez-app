@@ -1,7 +1,6 @@
-# sofe-ebermudez-app
+# Coronavirus Statistics
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Coronavirus Statistics is a web application to track COVID-19 data in real time. Currently, the application tracks basic general data from all around the world. This is an app to participate in the SOFE contest organized by NearSoft. 
 
 ## Prerequisites
 
@@ -24,34 +23,14 @@ You will need the following things properly installed on your computer.
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 * Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
 
-### Code Generators
+## API 
+The API used to get data is from [coronastatisticslive](http://api.coronastatistics.live/all)
 
-Make use of the many generators for code, try `ember help generate` for more details
+## Work in progress
+For lack of experience with the framework and limited time, this proyect is not complete yet. I'll keep working on it to add features such as: maps, graphs, and detailed data for each country. 
 
-### Running Tests
+## Contributing
+Pull requests are welcome. Take into consideration all commits are image descriptive based on [gitmoji](https://gitmoji.carloscuesta.me/) by Carlos Cuesta.
 
-* `ember test`
-* `ember test --server`
-
-### Linting
-
-* `npm run lint:hbs`
-* `npm run lint:js`
-* `npm run lint:js -- --fix`
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](https://emberjs.com/)
-* [ember-cli](https://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+## License
+[MIT](https://choosealicense.com/licenses/mit/)

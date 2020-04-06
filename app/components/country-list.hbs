@@ -1,0 +1,21 @@
+<select class="custom-select" onchange={{action "setSelection" value="target.value"}}>
+ <option disabled selected> Sort By Coming soon! </option>
+        <option disabled value="cases">Total Cases</option>
+        <option disabled value="todayCases">Today Cases</option>
+        <option disabled value="deaths">Total Deaths</option>
+        <option disabled value="todayDeaths">Today Deaths</option>
+        <option disabled value="recovered">Recoveries</option>
+</select>
+{{#each sortedCountries as |country|}}
+<li class="infectedCountry">
+    <h5 class="infectedCountryName">{{ country.country }}</h5>
+    <p class="infectedCountryDetails font-weight-bold"><span class="text-blue">
+            {{ country.cases }} Cases</span> & <span class="text-danger"> {{ country.deaths }}
+            Deaths</span></p>
+    <div class="casesSmall">
+        <span class="infectedCountryCases text-blue">+{{ country.todayCases }} cases</span>
+        <br>
+        <span class="infectedCountryDeaths text-danger">+{{ country.todayDeaths }} deaths</span>
+    </div>
+</li>
+{{/each}}

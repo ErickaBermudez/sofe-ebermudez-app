@@ -1,4 +1,5 @@
 @import "ember-bootstrap/bootstrap";
+@import "ember-basic-dropdown";
 $background-color: #282E38;
 $secondary-background-color: #323A46;
 $light-dark-color: #3B4452;
@@ -8,7 +9,7 @@ $color-cases: #21AFDD;
 $color-recovered: #10C469;
 $color-death: #FF5B5B;
 $color-critical: #F9C851;
-$card-border-radius: 20px; 
+$card-border-radius: 20px;
 $card-padding: 20px;
 
 
@@ -33,72 +34,72 @@ body {
   background-color: $background-color !important;
 }
 
-.text-blue{
+.text-blue {
   color: $color-cases;
 }
 
-.card-box{
+.card-box {
   background-color: $secondary-background-color;
   border-radius: $card-border-radius;
   padding: $card-padding;
   margin-bottom: 2em;
 }
 
-.casesSmall{
+.casesSmall {
   font-size: 12px;
   float: right;
   margin-top: -60px;
 }
 
-.infectedCountry{
+.infectedCountry {
   border-bottom: 2px solid $light-dark-color;
   padding: 5px;
   padding-top: 10px;
   margin-top: 5px;
 }
 
-.infectedCountryName{
+.infectedCountryName {
   font-size: 1em;
 }
 
-.infectedCountryDetails{
+.infectedCountryDetails {
   font-size: .8em;
   margin-top: -10px;
 }
 
-.header-title{
+.header-title {
   font-size: 1.2em;
 }
 
-#today-stats{
+#today-stats {
   font-size: .8em;
   margin-top: 5px;
   color: $secondary-text;
   font-weight: bold;
 }
 
-.data{
+.data {
   padding: 15px;
   border-radius: 5px;
 }
 
-.recovered{
+.recovered {
   border-bottom: 5px solid $color-recovered;
 }
 
-.death{
+.death {
   border-bottom: 5px solid $color-death;
 }
 
-.critical{
+.critical {
   border-bottom: 5px solid $color-critical;
 }
 
-.infected{
+.infected {
   border-bottom: 5px solid $color-cases;
 }
 
-.graph-icon{
+.graph-icon {
   border-radius: 30px;
   height: 20px;
   width: 50px;
@@ -106,52 +107,68 @@ body {
   font-size: 8px;
 }
 
-  .icon-infected{
-    background-color: $color-cases;
-    margin-top: -20px;
-  }
+.icon-infected {
+  background-color: $color-cases;
+  margin-top: -20px;
+}
 
-  .icon-deaths{
-    background-color: $color-death;
-  }
+.icon-deaths {
+  background-color: $color-death;
+}
 
-  .icon-recovered{
-    background-color: $color-recovered;
-  }
+.icon-recovered {
+  background-color: $color-recovered;
+}
 
-  .icon-critical{
-    background-color: $color-critical;
-  }
+.icon-critical {
+  background-color: $color-critical;
+}
 
-  .material-icons {
-    padding-top: 2px;
-    font-size: 12px;
-  }
+.material-icons {
+  padding-top: 2px;
+  font-size: 12px;
+}
 
-  .total{
-    font-size: 2em;
-  }
+.total {
+  font-size: 2em;
+}
 
-  .today{
-    font-size: .7em;
-  }
+.today {
+  font-size: .7em;
+}
 
-  #search{
-    background-color: $background-color;
-    color: $main-text;
-    border-color: $light-dark-color;
-    width: 100%;
-    font-size: 12px;
-  }
+#search {
+  background-color: $background-color;
+  color: $main-text;
+  border-color: $light-dark-color;
+  width: 100%;
+  font-size: 12px;
+}
 
-  .custom-select{
-    background-color: $background-color;
-    color: $main-text;
-    border-color: $light-dark-color;
-    width: 100%;
-    font-size: 12px;
-  }
+.custom-select {
+  background-color: $background-color;
+  color: $main-text;
+  border-color: $light-dark-color;
+  width: 115%;
+  font-size: 12px;
+  margin-left: -40px;
+}
 
-  #country-control{
-    margin-bottom: -20px;
+.custom-select-content{
+  background-color: $background-color !important;
+  font-size: 12px;
+  li{
+    border-bottom: 1px solid $light-dark-color;
+    padding: 5px;
+    margin-right: 5px;
   }
+}
+
+#country-control {
+  margin-bottom: -20px;
+}
+
+li {
+  list-style-type: none !important;
+  margin-left: -30px;
+}

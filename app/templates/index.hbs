@@ -72,36 +72,21 @@
                 </div>
                 <h4 class="header-title">{{model.country.length}} Affected Countries </h4>
                 <div class="form-group" id="country-control">
-                    <input type="text" id="search" class="form-control" placeholder="Search Affected Countries">
-                    <select class="custom-select">
-                        <option selected="" disabled>Sort By</option>
-                        <option value="cases">Total Cases</option>
-                        <option value="todayCases">Today Cases</option>
-                        <option value="deaths">Total Deaths</option>
-                        <option value="todayDeaths">Today Deaths</option>
-                        <option value="recovered">Total Recoveries</option>
-                    </select>
+                    <input type="text" id="search" class="form-control" disabled placeholder="Coming soon!">
                 </div>
                 <div class="fa-3x text-center">
                     <i class="fas fa-circle-notch fa-spin m-2"></i>
                 </div>
                 <div class="infectedCountries">
 
-                    {{#each model.country as |country|}}
-                    <div class="infectedCountry">
-                        <h5 class="infectedCountryName">{{ country.country }}</h5>
-                        <p class="infectedCountryDetails font-weight-bold"><span class="text-blue">
-                                {{ country.cases }} Cases</span> & <span class="text-danger"> {{ country.deaths }}
-                                Deaths</span></p>
-                        <div class="casesSmall">
-                            <span class="infectedCountryCases text-blue">+{{ country.todayCases }} cases</span>
-                            <br>
-                            <span class="infectedCountryDeaths text-danger">+{{ country.todayDeaths }} deaths</span>
-                        </div>
-                    </div>
-                    {{/each}}
+                    {{country-list countries = model.country}}
 
                 </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card-box">
+                <!--todo: insert map-->
             </div>
         </div>
 
