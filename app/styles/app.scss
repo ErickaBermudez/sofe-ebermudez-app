@@ -5,8 +5,12 @@ $light-dark-color: #3B4452;
 $main-text: #fff;
 $secondary-text: #A9B3BD;
 $color-cases: #21AFDD;
+$color-recovered: #10C469;
+$color-death: #FF5B5B;
+$color-critical: #F9C851;
 $card-border-radius: 20px; 
 $card-padding: 20px;
+
 
 body {
   background-color: $background-color;
@@ -37,6 +41,7 @@ body {
   background-color: $secondary-background-color;
   border-radius: $card-border-radius;
   padding: $card-padding;
+  margin-bottom: 2em;
 }
 
 .casesSmall{
@@ -71,3 +76,61 @@ body {
   color: $secondary-text;
   font-weight: bold;
 }
+
+.data{
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.recovered{
+  border-bottom: 5px solid $color-recovered;
+}
+
+.death{
+  border-bottom: 5px solid $color-death;
+}
+
+.critical{
+  border-bottom: 5px solid $color-critical;
+}
+
+.infected{
+  border-bottom: 5px solid $color-cases;
+}
+
+.graph-icon{
+  border-radius: 30px;
+  height: 20px;
+  width: 50px;
+  text-align: center;
+  font-size: 8px;
+}
+
+  .icon-infected{
+    background-color: $color-cases;
+  }
+
+  .icon-deaths{
+    background-color: $color-death;
+  }
+
+  .icon-recovered{
+    background-color: $color-recovered;
+  }
+
+  .icon-critical{
+    background-color: $color-critical;
+  }
+
+  .material-icons {
+    padding-top: 2px;
+    font-size: 12px;
+  }
+
+  .total{
+    font-size: 1em;
+  }
+
+  .today{
+    font-size: .7em;
+  }

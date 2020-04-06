@@ -1,11 +1,57 @@
 <div class="container-fluid">
     <div class="row">
+        <div class="col">
+            <div class="card-box infections">
+                <div class="header-title">Infections</div>
+                <div class="data infected">
+                    <div class="float-right">
+                        <div class="graph-icon icon-infected">
+                            00.00% <span class="material-icons">trending_up</span>
+                        </div>
+                    </div>
+                    <div class="total">#</div>
+                    <div class="today"># today</div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card-box deaths">
+                <div class="header-title">Deaths</div>
+                <div class="data death">
+                    <div class="float-right">
+                        <div class="graph-icon icon-deaths">
+                            00.00% <span class="material-icons">trending_up</span>
+                        </div>
+                    </div>
+                    <div class="total">#</div>
+                    <div class="today"># today</div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col">
+            <div class="card-box">
+                <div class="header-title">Recovered</div>
+                <div class="data recovered">
+                    <div class="float-right">
+                        <div class="graph-icon icon-recovered">
+                            00.00%<span class="material-icons">trending_up</span>
+                        </div>
+                    </div>
+                    <div class="total">#</div>
+                    <div class="today"># today</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
         <div class="col-xl-4">
             <div class="card-box">
                 <div class="float-right">
                     <p id="today-stats">Today's Statistics</p>
                 </div>
-
                 <h4 class="header-title">{{ model.length }} Affected Countries </h4>
                 <!--<div class="form-group row">
                     <div class="col-md-8 col-8">
