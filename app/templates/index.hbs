@@ -9,7 +9,7 @@
                             00.00% <span class="material-icons">trending_up</span>
                         </div>
                     </div>
-                    <div class="total">#</div>
+                    <div class="total">{{ formatLargeNumber @model.case.firstObject.cases }}</div>
                     <div class="today"># today</div>
                 </div>
             </div>
@@ -23,7 +23,7 @@
                             00.00% <span class="material-icons">trending_up</span>
                         </div>
                     </div>
-                    <div class="total">#</div>
+                    <div class="total">{{formatLargeNumber @model.case.firstObject.deaths }}</div>
                     <div class="today"># today</div>
                 </div>
 
@@ -38,7 +38,7 @@
                             00.00%<span class="material-icons">trending_up</span>
                         </div>
                     </div>
-                    <div class="total">#</div>
+                    <div class="total">{{formatLargeNumber @model.case.firstObject.recovered }}</div>
                     <div class="today"># today</div>
                 </div>
             </div>
@@ -52,7 +52,7 @@
                 <div class="float-right">
                     <p id="today-stats">Today's Statistics</p>
                 </div>
-                <h4 class="header-title">{{ model.length }} Affected Countries </h4>
+                <h4 class="header-title">{{model.country.length}} Affected Countries </h4>
                 <!--<div class="form-group row">
                     <div class="col-md-8 col-8">
                         <input type="text" id="example-placeholder" class="form-control"
@@ -75,7 +75,7 @@
                 </div>
                 <div class="infectedCountries">
 
-                    {{#each model as |country|}}
+                    {{#each model.country as |country|}}
                     <div class="infectedCountry">
                         <h5 class="infectedCountryName">{{ country.country }}</h5>
                         <p class="infectedCountryDetails font-weight-bold"><span class="text-blue">
