@@ -20,6 +20,35 @@ body {
   padding-right: 4em;
 }
 
+.btn{
+  color: $main-text;
+  margin: 5px;
+  opacity: 70%;
+  align-content: center;
+  font-size: 10px;
+  width: auto; 
+  height: 12px;
+  &:hover{
+    opacity: 100%;
+    color: $main-text !important;
+  }
+}
+.btn-map-cases{
+  background-color: $color-cases;
+}
+
+.btn-map-deaths{
+  background-color: $color-death;
+}
+
+.btn-map-recovered{
+  background-color: $color-recovered;
+}
+
+.btn-map-critical{
+  background-color: $color-critical;
+}
+
 #virus-image {
   height: 30px;
   width: 30px;

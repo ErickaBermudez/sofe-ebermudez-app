@@ -1,3 +1,11 @@
-<div id="map" class="map" {{did-insert this.setup}}>
+<h3 class="header-title float-left">Worldwide Infections</h3>
+<div class="row">
+  <button type="button" class="btn btn-map-cases" {{on 'click' (fn this.displayMapForCases)}}></button>
+  <button type="button" class="btn btn-map-recovered" {{on 'click' (fn this.displayMapForRecovered)}}></button>
+  <button type="button" class="btn btn-map-deaths" {{on 'click' (fn this.displayMapForDeaths)}}></button>
+  <button type="button" class="btn btn-map-critical" {{on 'click' (fn this.displayMapForCritical)}}></button>
+</div>
+<div id="chartdiv" class="width-100 mt-2" style="height:400px" {{did-insert this.didCreateMap}}
+  {{will-destroy this.willDestroyMap}}>
 
 </div>

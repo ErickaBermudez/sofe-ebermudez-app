@@ -1,26 +1,25 @@
 
-    <select class="custom-select"
-        onchange={{action "setSelection" value="target.value"}}>
-        <option disabled selected> Sort By </option>
-        <option value="cases">Total Cases</option>
-        <option value="todayCases">Today Cases</option>
-        <option value="deaths">Total Deaths</option>
-        <option value="todayDeaths">Today Deaths</option>
-        <option value="recovered">Recoveries</option>
-    </select>
+<select class="custom-select" onchange={{action "setSelection" value="target.value"}}>
+    <option disabled selected> Sort By </option>
+    <option value="cases">Total Cases</option>
+    <option value="todayCases">Today Cases</option>
+    <option value="deaths">Total Deaths</option>
+    <option value="todayDeaths">Today Deaths</option>
+    <option value="recovered">Recoveries</option>
+</select>
 
-    <div class="infectedCountries">
-        {{#each sortedCountries as |country|}}
-        <li class="infectedCountry">
-            <h5 class="infectedCountryName">{{ country.country }}</h5>
-            <p class="infectedCountryDetails font-weight-bold"><span class="text-blue">
-                    {{ country.cases }} Cases</span> & <span class="text-danger"> {{ country.deaths }}
-                    Deaths</span></p>
-            <div class="casesSmall">
-                <span class="infectedCountryCases text-blue">+{{ country.todayCases }} cases</span>
-                <br>
-                <span class="infectedCountryDeaths text-danger">+{{ country.todayDeaths }} deaths</span>
-            </div>
-        </li>
-        {{/each}}
-    </div>
+<div class="infectedCountries">
+    {{#each sortedCountries as |country|}}
+    <li class="infectedCountry">
+        <h5 class="infectedCountryName">{{ country.country }}</h5>
+        <p class="infectedCountryDetails font-weight-bold"><span class="text-blue">
+                {{ country.cases }} Cases</span> & <span class="text-danger"> {{ country.deaths }}
+                Deaths</span></p>
+        <div class="casesSmall">
+            <span class="infectedCountryCases text-blue">+{{ country.todayCases }} cases</span>
+            <br>
+            <span class="infectedCountryDeaths text-danger">+{{ country.todayDeaths }} deaths</span>
+        </div>
+    </li>
+    {{/each}}
+</div>
