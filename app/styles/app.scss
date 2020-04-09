@@ -55,7 +55,7 @@ body {
 }
 
 .infectedCountries {
-  max-height: 300px;
+  max-height: 335px;
   overflow-y: scroll;
   margin-left: -40px;
   padding-left: 40px;
@@ -181,8 +181,6 @@ body {
   color: $main-text;
   border-color: $light-dark-color;
   font-size: 12px;
-  margin-left: -40px;
-  width: 115%;
 }
 
 .custom-select-content{
@@ -202,4 +200,12 @@ body {
 li {
   list-style-type: none !important;
   margin-left: -30px;
+}
+
+.filter{
+  margin-right: -30px;
+}
+
+.filters{
+  width: 100px !important;
 }

@@ -1,14 +1,25 @@
+<div class="row float-right">
+    <div class="col filter">
+        <div class="form-group" id="country-control">
+            <input type="text" id="search" class="form-control filters" onkeyUp={{action "searchByName"}}
+                placeholder="Search...">
+        </div>
+    </div>
 
-<select class="custom-select" onchange={{action "setSelection" value="target.value"}}>
-    <option disabled selected> Sort By </option>
-    <option value="cases">Total Cases</option>
-    <option value="todayCases">Today Cases</option>
-    <option value="deaths">Total Deaths</option>
-    <option value="todayDeaths">Today Deaths</option>
-    <option value="recovered">Recoveries</option>
-</select>
+    <div class="col">
+        <select class="custom-select filters" onchange={{action "setSelection" value="target.value"}}>
+            <option disabled selected> Sort By </option>
+            <option value="cases">Total Cases</option>
+            <option value="todayCases">Today Cases</option>
+            <option value="deaths">Total Deaths</option>
+            <option value="todayDeaths">Today Deaths</option>
+            <option value="recovered">Recoveries</option>
+        </select>
+    </div>
+</div>
 
-<div class="infectedCountries">
+<br><br>
+<ul class="infectedCountries" id="countries">
     {{#each sortedCountries as |country|}}
     <li class="infectedCountry">
         <h5 class="infectedCountryName">{{ country.country }}</h5>
@@ -22,4 +33,4 @@
         </div>
     </li>
     {{/each}}
-</div>
+</ul>

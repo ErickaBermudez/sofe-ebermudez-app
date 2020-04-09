@@ -348,7 +348,6 @@ export default class MapComponent extends Component {
     circle.tooltipText = "{name}: {value}";
 
     imageSeries.data = data;
-    console.log(data);
     imageSeries.dataFields.value = "value";
     imageSeries.heatRules.push({
       "target": circle,
