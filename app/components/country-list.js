@@ -10,8 +10,8 @@ export default Ember.Component.extend({
   actions: {
     setSelection: function (selected) {
       this.set('selectedOption', selected),
-      console.log(this.get('selectedOption'))
-      //todo: update sortDefinition to selected option 
+      console.log(this.get('selectedOption')),
+      this.set('sortDefinition', [this.get('selectedOption')+':desc'])
     }
   }
 });

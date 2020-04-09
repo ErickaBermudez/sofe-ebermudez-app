@@ -28,6 +28,8 @@ body {
 .infectedCountries {
   max-height: 300px;
   overflow-y: scroll;
+  margin-left: -40px;
+  padding-left: 40px;
 }
 
 .navbar-custom {
@@ -150,6 +152,8 @@ body {
   color: $main-text;
   border-color: $light-dark-color;
   font-size: 12px;
+  margin-left: -40px;
+  width: 115%;
 }
 
 .custom-select-content{
